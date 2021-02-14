@@ -4,5 +4,10 @@ __author__ = "Daniel Dudziak"
 __license__ = "GNU GPL 3.0"
 __version__ = "1.0.0"
 
+from Inital import init
+
 if __name__ == "__main__":
-    print("Hello world")
+    flatService = init()
+    flatService.update_flats()
+    flatService.print_all_flats()
+
