@@ -13,19 +13,15 @@ class FlatServiceApi:
     def __init__(self, properties_file_path):
         flat_property_reader = FlatPropertyFileReader.FlatPropertyFileReader(properties_file_path)
         self.flat_properties = flat_property_reader.get_flat_properties()
-        pass
 
-    @classmethod
-    def update_flats(cls):
+    def update_flats(self):
         logging.debug("Starting to update flats")
         pass
 
-    @classmethod
-    def print_new_flats(cls):
+    def print_new_flats(self):
         logging.debug("Starting to print new flats")
         pass
 
-    @classmethod
-    def print_all_flats(cls):
+    def print_all_flats(self):
         logging.debug("Starting to print all flats")
         pass

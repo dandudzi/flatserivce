@@ -14,15 +14,16 @@ import re
 def init():
     properties_file_path = "sites_settings.json"
     level_logging = logging.INFO
-    logging_file_name = '../../../../flat.log'
+    logging_file_name = 'flat.log'
     for arg in sys.argv[1:]:
         if arg == "Debug":
             level_logging = logging.DEBUG
-        elif re.search("^.*\.json", arg) != 'None':
+        elif re.search("^.*\.json", arg) is not None:
             properties_file_path = arg
 
     logging.basicConfig(level=level_logging,
-                        format='%(asctime)s [%(threadName)s] [%(levelname)s] %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p',
+                        format='%(asctime)s [%(threadName)s] [%(levelname)s] %(message)s',
+                        datefmt='%m/%d/%Y %I:%M:%S %p',
                         handlers=[
                             logging.FileHandler(logging_file_name),
                             logging.StreamHandler()

@@ -10,4 +10,3 @@ if __name__ == "__main__":
     flatService = init()
     flatService.update_flats()
     flatService.print_all_flats()
-
