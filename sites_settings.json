@@ -1,0 +1,20 @@
+{
+  "flats": [
+    {
+      "name": "trojmiasto",
+      "site": {
+        "url": "https://ogloszenia.trojmiasto.pl",
+        "subdomain": "/nieruchomosci",
+        "fileExtension": ".html"
+      },
+      "surfaceRange": {
+        "min": 55,
+        "max": 70
+      },
+      "numberOfRooms": {
+        "min": 3,
+        "max": 3
+      }
+    }
+  ]
+}
