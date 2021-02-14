@@ -1,0 +1,1 @@
+This is the project responsible for checking the newest version of the flats on the market.
