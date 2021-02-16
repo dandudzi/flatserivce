@@ -17,7 +17,8 @@ class FlatPropertyFileReader:
         self.properties = properties_file_path
         logging.debug("Flat properties loaded")
 
-    def get_flat_properties(self) -> []:
+    def get_flat_properties(self) -> [FlatProperty]:
+        flat_properties = []
         with open(self.properties) as json_file:
             data = json.load(json_file)
             for flat in data['flats']:
@@ -27,5 +28,8 @@ class FlatPropertyFileReader:
                 localizations = Localizations(flat['localizations'])
                 level = Level.from_json(flat['level'])
                 built_year = BuiltYear.from_json(flat['builtYear'])
-                logging.info(FlatProperty(domain_spec, surface, rooms, localizations, level, built_year))
+                flat_property = FlatProperty(domain_spec, surface, rooms, localizations, level, built_year)
+                logging.debug(flat_property)
+                flat_properties += [flat_property]
+        return flat_properties
         pass
